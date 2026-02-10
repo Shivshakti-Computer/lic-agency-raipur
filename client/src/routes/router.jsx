@@ -12,6 +12,7 @@ import Dashboard from "../pages/admin/Dashboard";
 import Leads from "../pages/admin/Leads";
 
 import NotFound from "../pages/NotFound";
+import Documents from "../pages/public/Documents";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
             { path: "/plans", element: <Plans /> },
             { path: "/advisor", element: <Advisor /> },
             { path: "/contact", element: <Contact /> },
+            { path: "/documents", element: <Documents/>}
         ],
     },
     {

@@ -1,9 +1,38 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     background-color: #ffffff;
     color: #222;
 }
 
 .section-padding {
     padding: 60px 0;
+}
+
+/* Disable mobile controls for Hero section of Home components */
+.carousel img {
+    height: 320px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}
+
+/* CTA */
+.section-padding.bg-primary {
+    background: linear-gradient(135deg, #0d6efd, #084298);
+}
+
+.btn-lg {
+    padding: 12px 28px;
 }

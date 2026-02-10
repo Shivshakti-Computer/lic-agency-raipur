@@ -5,16 +5,14 @@ body {
 }
 
 .page-header {
-  background: linear-gradient(
-    180deg,
-    #f8f9fa 0%,
-    #ffffff 100%
-  );
-  border-bottom: 1px solid #e9ecef;
+    background: linear-gradient(180deg,
+            #f8f9fa 0%,
+            #ffffff 100%);
+    border-bottom: 1px solid #e9ecef;
 }
 
 .page-header h1 {
-  letter-spacing: 0.5px;
+    letter-spacing: 0.5px;
 }
 
 
@@ -49,4 +47,120 @@ body {
 
 .btn-lg {
     padding: 12px 28px;
+}
+
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25d366;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    color: #fff;
+}
+
+/* Header Styling */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.mobile-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-body {
+    background: #fff;
+    width: 85%;
+    height: 100%;
+    padding: 20px;
+    animation: slideIn 0.3s ease;
+}
+
+.mobile-menu-header {
+    background: #fff;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-body a {
+    display: block;
+    padding: 12px 0;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+}
+
+.mobile-menu-body a:hover {
+    color: #0d6efd;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Footer Styling */
+.footer {
+    font-size: 14px;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #0d6efd;
+}
+
+.footer-social {
+    width: 36px;
+    height: 36px;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #333;
+    transition: 0.2s ease;
+}
+
+.footer-social:hover {
+    background: #0d6efd;
+    color: #fff;
 }

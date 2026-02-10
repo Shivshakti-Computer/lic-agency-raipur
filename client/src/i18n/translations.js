@@ -10,6 +10,7 @@ const translations = {
         },
         tagline: "Bharosa LIC ka, Saath Niveshan ka",
         getQuote: "Get Quote",
+        menu: "Menu"
     },
 
     hi: {
@@ -23,6 +24,7 @@ const translations = {
         },
         tagline: "LIC का भरोसा, निवेशन का साथ",
         getQuote: "कोटेशन प्राप्त करें",
+        menu: "मेनू"
     },
 };
 

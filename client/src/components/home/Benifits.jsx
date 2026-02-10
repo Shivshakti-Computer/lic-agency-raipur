@@ -1,14 +1,41 @@
 import lic1 from "../../assets/images/lic-office.jpg";
 import lic2 from "../../assets/images/lic-family.jpg";
-// import lic3 from "../assets/images/lic-family.jpg";
+import { useLanguage } from "../../context/LanguageContext";
+
+/* ================= LOCAL TRANSLATION OBJECT ================= */
+const benefitsText = {
+    hi: {
+        heading: "LIC क्यों?",
+        points: [
+            "भारत की सबसे भरोसेमंद जीवन बीमा संस्था",
+            "सरकारी उपक्रम",
+            "गारंटीड और सुरक्षित योजनाएं",
+            "पूरे भारत में सेवाएं",
+            "दावा निपटान में मजबूत रिकॉर्ड",
+        ],
+    },
+    en: {
+        heading: "Why LIC?",
+        points: [
+            "India’s most trusted life insurance company",
+            "Government-owned enterprise",
+            "Guaranteed and secure plans",
+            "Services available across India",
+            "Strong claim settlement record",
+        ],
+    },
+};
 
 const Benefits = () => {
+    const { lang } = useLanguage();
+    const t = benefitsText[lang];
+
     return (
         <section className="section-padding bg-light">
             <div className="container">
 
                 <h2 className="text-center mb-4 fw-bold">
-                    LIC क्यों?
+                    {t.heading}
                 </h2>
 
                 <div className="row align-items-center">
@@ -16,11 +43,9 @@ const Benefits = () => {
                     {/* Left Content */}
                     <div className="col-md-6">
                         <ul className="fs-5">
-                            <li>भारत की सबसे भरोसेमंद जीवन बीमा संस्था</li>
-                            <li>सरकारी उपक्रम</li>
-                            <li>गारंटीड और सुरक्षित योजनाएं</li>
-                            <li>पूरे भारत में सेवाएं</li>
-                            <li>दावा निपटान में मजबूत रिकॉर्ड</li>
+                            {t.points.map((point, index) => (
+                                <li key={index}>{point}</li>
+                            ))}
                         </ul>
                     </div>
 
@@ -34,29 +59,18 @@ const Benefits = () => {
                         >
                             <div className="carousel-inner rounded">
 
-                                <div className="carousel-item active">
-                                    <img
-                                        src={lic1}
-                                        className="d-block w-100 img-fluid"
-                                        alt="LIC Office"
-                                    />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <img
-                                        src={lic2}
-                                        className="d-block w-100 img-fluid"
-                                        alt="LIC Branch Network"
-                                    />
-                                </div>
-
-                                {/* <div className="carousel-item">
-                                    <img
-                                        src={lic3}
-                                        className="d-block w-100 img-fluid"
-                                        alt="LIC Family Protection"
-                                    />
-                                </div> */}
+                                {[lic1, lic2].map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className={`carousel-item ${index === 0 ? "active" : ""}`}
+                                    >
+                                        <img
+                                            src={img}
+                                            className="d-block w-100 img-fluid"
+                                            alt="LIC Benefits"
+                                        />
+                                    </div>
+                                ))}
 
                             </div>
 

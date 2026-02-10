@@ -1,15 +1,126 @@
 import PageHeader from "../../components/common/PageHeader";
+import { useLanguage } from "../../context/LanguageContext";
 
 import aboutOffice from "../../assets/images/about-office.jpg";
 import aboutVideo from "../../assets/videos/about-video.mp4";
 
+/* ================= LOCAL TRANSLATION OBJECT ================= */
+const aboutText = {
+  hi: {
+    header: {
+      title: "हमारे बारे में",
+      subtitle: "LIC का भरोसा, निवेशन का साथ",
+    },
+
+    who: {
+      heading: "Niveshan कौन है?",
+      para1:
+        "Niveshan एक अनुभवी और भरोसेमंद LIC एजेंसी है, जो परिवारों को उनके भविष्य की सुरक्षा के लिए सही जीवन बीमा और निवेश योजनाएँ चुनने में मार्गदर्शन प्रदान करती है।",
+      para2:
+        "हम मानते हैं कि बीमा केवल एक पॉलिसी नहीं, बल्कि आपके सपनों, ज़िम्मेदारियों और परिवार की सुरक्षा का वादा होता है।",
+    },
+
+    vision: {
+      heading: "हमारा दृष्टिकोण",
+      desc:
+        "हर परिवार को सही समय पर सही सलाह मिले — यही हमारा उद्देश्य है।",
+    },
+
+    values: {
+      heading: "हमारे मूल मूल्य",
+      items: [
+        {
+          title: "ईमानदारी",
+          desc: "हर सलाह में पूर्ण पारदर्शिता और सच्चाई का पालन।",
+        },
+        {
+          title: "विश्वसनीयता",
+          desc: "दीर्घकालिक संबंध और जीवनभर का भरोसेमंद साथ।",
+        },
+        {
+          title: "ग्राहक प्राथमिकता",
+          desc: "हर निर्णय ग्राहक के हित और आवश्यकता को ध्यान में रखकर।",
+        },
+      ],
+    },
+
+    why: {
+      heading: "Niveshan को क्यों चुनें?",
+      points: [
+        "आपकी ज़रूरत के अनुसार व्यक्तिगत और ईमानदार सलाह",
+        "LIC की सभी योजनाओं की स्पष्ट और संपूर्ण जानकारी",
+        "पॉलिसी से लेकर दावा निपटान तक निरंतर सहयोग",
+        "सरल, पारदर्शी और भरोसेमंद प्रक्रिया",
+      ],
+    },
+
+    closing:
+      "Niveshan में हम मानते हैं कि आपका भरोसा ही हमारी सबसे बड़ी पहचान है।",
+  },
+
+  en: {
+    header: {
+      title: "About Us",
+      subtitle: "Trust of LIC, Support of Niveshan",
+    },
+
+    who: {
+      heading: "Who is Niveshan?",
+      para1:
+        "Niveshan is an experienced and trusted LIC agency that guides families in choosing the right life insurance and investment plans to secure their future.",
+      para2:
+        "We believe insurance is not just a policy, but a promise to protect your dreams, responsibilities, and your family’s future.",
+    },
+
+    vision: {
+      heading: "Our Vision",
+      desc:
+        "To ensure every family receives the right advice at the right time.",
+    },
+
+    values: {
+      heading: "Our Core Values",
+      items: [
+        {
+          title: "Integrity",
+          desc: "Complete transparency and honesty in every piece of advice.",
+        },
+        {
+          title: "Reliability",
+          desc: "Long-term relationships and lifelong trusted support.",
+        },
+        {
+          title: "Customer First",
+          desc: "Every decision is made keeping customer needs and interests in mind.",
+        },
+      ],
+    },
+
+    why: {
+      heading: "Why Choose Niveshan?",
+      points: [
+        "Personalized and honest advice based on your needs",
+        "Clear and complete information about all LIC plans",
+        "Continuous support from policy purchase to claim settlement",
+        "Simple, transparent, and trustworthy process",
+      ],
+    },
+
+    closing:
+      "At Niveshan, we believe your trust is our greatest identity.",
+  },
+};
+
 const About = () => {
+  const { lang } = useLanguage();
+  const t = aboutText[lang];
+
   return (
     <>
       {/* Page Header */}
       <PageHeader
-        title="हमारे बारे में"
-        subtitle="Bharosa LIC ka, Saath Niveshan ka"
+        title={t.header.title}
+        subtitle={t.header.subtitle}
       />
 
       {/* Who We Are */}
@@ -18,19 +129,16 @@ const About = () => {
           <div className="row align-items-center">
 
             <div className="col-md-6">
-              <h2 className="fw-bold mb-3">Niveshan कौन है?</h2>
+              <h2 className="fw-bold mb-3">
+                {t.who.heading}
+              </h2>
 
               <p className="fs-5 text-muted">
-                Niveshan एक अनुभवी और भरोसेमंद LIC एजेंसी है,
-                जो परिवारों को उनके भविष्य की सुरक्षा के लिए
-                सही जीवन बीमा और निवेश योजनाएँ चुनने में
-                मार्गदर्शन प्रदान करती है।
+                {t.who.para1}
               </p>
 
               <p className="fs-5 text-muted">
-                हम मानते हैं कि बीमा केवल एक पॉलिसी नहीं,
-                बल्कि आपके सपनों, ज़िम्मेदारियों और
-                परिवार की सुरक्षा का वादा होता है।
+                {t.who.para2}
               </p>
             </div>
 
@@ -51,12 +159,11 @@ const About = () => {
         <div className="container text-center">
 
           <h2 className="fw-bold mb-4">
-            हमारा दृष्टिकोण
+            {t.vision.heading}
           </h2>
 
           <p className="fs-5 text-muted mb-4">
-            हर परिवार को सही समय पर सही सलाह मिले —
-            यही हमारा उद्देश्य है।
+            {t.vision.desc}
           </p>
 
           <video
@@ -75,42 +182,22 @@ const About = () => {
         <div className="container">
 
           <h2 className="text-center fw-bold mb-5">
-            हमारे मूल मूल्य
+            {t.values.heading}
           </h2>
 
           <div className="row text-center">
-
-            <div className="col-md-4 mb-4">
-              <div className="p-4 bg-white rounded shadow-sm h-100">
-                <h5 className="fw-bold">ईमानदारी</h5>
-                <p className="text-muted mb-0">
-                  हर सलाह में पूर्ण पारदर्शिता
-                  और सच्चाई का पालन।
-                </p>
+            {t.values.items.map((item, index) => (
+              <div key={index} className="col-md-4 mb-4">
+                <div className="p-4 bg-white rounded shadow-sm h-100">
+                  <h5 className="fw-bold">{item.title}</h5>
+                  <p className="text-muted mb-0">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div className="col-md-4 mb-4">
-              <div className="p-4 bg-white rounded shadow-sm h-100">
-                <h5 className="fw-bold">विश्वसनीयता</h5>
-                <p className="text-muted mb-0">
-                  दीर्घकालिक संबंध और
-                  जीवनभर का भरोसेमंद साथ।
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4 mb-4">
-              <div className="p-4 bg-white rounded shadow-sm h-100">
-                <h5 className="fw-bold">ग्राहक प्राथमिकता</h5>
-                <p className="text-muted mb-0">
-                  हर निर्णय ग्राहक के
-                  हित और आवश्यकता को ध्यान में रखकर।
-                </p>
-              </div>
-            </div>
-
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -119,27 +206,18 @@ const About = () => {
         <div className="container">
 
           <h2 className="text-center fw-bold mb-4">
-            Niveshan को क्यों चुनें?
+            {t.why.heading}
           </h2>
 
           <div className="row justify-content-center">
             <div className="col-md-8">
-
               <ul className="fs-5">
-                <li className="mb-2">
-                  आपकी ज़रूरत के अनुसार व्यक्तिगत और ईमानदार सलाह
-                </li>
-                <li className="mb-2">
-                  LIC की सभी योजनाओं की स्पष्ट और संपूर्ण जानकारी
-                </li>
-                <li className="mb-2">
-                  पॉलिसी से लेकर दावा निपटान तक निरंतर सहयोग
-                </li>
-                <li>
-                  सरल, पारदर्शी और भरोसेमंद प्रक्रिया
-                </li>
+                {t.why.points.map((point, index) => (
+                  <li key={index} className="mb-2">
+                    {point}
+                  </li>
+                ))}
               </ul>
-
             </div>
           </div>
 
@@ -149,12 +227,9 @@ const About = () => {
       {/* Closing Statement */}
       <section className="section-padding text-center">
         <div className="container">
-
           <p className="fs-4 fw-semibold">
-            Niveshan में हम मानते हैं कि
-            आपका भरोसा ही हमारी सबसे बड़ी पहचान है।
+            {t.closing}
           </p>
-
         </div>
       </section>
     </>

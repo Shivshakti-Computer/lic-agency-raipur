@@ -106,7 +106,7 @@ const Header = () => {
             {/* ================= MOBILE MENU ================= */}
             <div className={`mobile-menu ${open ? "show" : ""}`}>
                 <div className="mobile-menu-header">
-                    <span className="fw-bold">Menu</span>
+                    <span className="fw-bold">{t.menu}</span>
                     <button className="btn" onClick={() => setOpen(false)}>
                         <i className="bi bi-x-lg"></i>
                     </button>

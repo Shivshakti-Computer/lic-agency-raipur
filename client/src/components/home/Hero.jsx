@@ -1,8 +1,30 @@
-import hero1 from "../../assets/images/hero-image1.jpg"
-import hero2 from "../../assets/images/hero-image2.jpg"
-import hero3 from "../../assets/images/hero-image3.jpg"
+import hero1 from "../../assets/images/hero-image1.jpg";
+import hero2 from "../../assets/images/hero-image2.jpg";
+import hero3 from "../../assets/images/hero-image3.jpg";
+import { useLanguage } from "../../context/LanguageContext";
+
+/* ================= LOCAL TRANSLATION OBJECT ================= */
+const heroText = {
+    hi: {
+        title: "भविष्य की सुरक्षा,",
+        highlight: "आज का भरोसा",
+        tagline: "Bharosa LIC ka, Saath Niveshan ka",
+        subtitle: "आपके और आपके परिवार के सुरक्षित भविष्य के लिए",
+        cta: "निःशुल्क परामर्श लें",
+    },
+    en: {
+        title: "Secure Tomorrow,",
+        highlight: "Trust Today",
+        tagline: "Trust of LIC, Support of Niveshan",
+        subtitle: "For a safe and secure future of you and your family",
+        cta: "Get Free Consultation",
+    },
+};
 
 const Hero = () => {
+    const { lang } = useLanguage();
+    const t = heroText[lang];
+
     return (
         <section className="section-padding bg-light">
             <div className="container">
@@ -11,17 +33,19 @@ const Hero = () => {
                     {/* Left Content */}
                     <div className="col-md-6">
                         <h1 className="fw-bold">
-                            भविष्य की सुरक्षा,<br />
-                            <span className="text-primary">आज का भरोसा</span>
+                            {t.title}
+                            <br />
+                            <span className="text-primary">{t.highlight}</span>
                         </h1>
 
                         <p className="mt-3">
-                            <strong>Bharosa LIC ka, Saath Niveshan ka</strong><br />
-                            आपके और आपके परिवार के सुरक्षित भविष्य के लिए
+                            <strong>{t.tagline}</strong>
+                            <br />
+                            {t.subtitle}
                         </p>
 
                         <button className="btn btn-primary mt-3">
-                            निःशुल्क परामर्श लें
+                            {t.cta}
                         </button>
                     </div>
 
@@ -34,29 +58,18 @@ const Hero = () => {
                         >
                             <div className="carousel-inner rounded">
 
-                                <div className="carousel-item active">
-                                    <img
-                                        src={hero1}
-                                        className="d-block w-100 img-fluid"
-                                        alt="LIC Family Security"
-                                    />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <img
-                                        src={hero2}
-                                        className="d-block w-100 img-fluid"
-                                        alt="Life Insurance Planning"
-                                    />
-                                </div>
-
-                                <div className="carousel-item">
-                                    <img
-                                        src={hero3}
-                                        className="d-block w-100 img-fluid"
-                                        alt="Future Investment"
-                                    />
-                                </div>
+                                {[hero1, hero2, hero3].map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className={`carousel-item ${index === 0 ? "active" : ""}`}
+                                    >
+                                        <img
+                                            src={img}
+                                            className="d-block w-100 img-fluid"
+                                            alt="LIC Insurance Services"
+                                        />
+                                    </div>
+                                ))}
 
                             </div>
 

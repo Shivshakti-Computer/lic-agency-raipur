@@ -2,20 +2,24 @@ import PageHeader from "../../components/common/PageHeader";
 import { useLanguage } from "../../context/LanguageContext";
 
 import aboutOffice from "../../assets/images/about-office.jpg";
-import aboutVideo from "../../assets/videos/about-video.mp4";
+import aboutVideo from "../../assets/videos/branding-video.mp4";
 
 /* ================= LOCAL TRANSLATION OBJECT ================= */
 const aboutText = {
   hi: {
     header: {
       title: "हमारे बारे में",
-      subtitle: "LIC का भरोसा, निवेशन का साथ",
+      // subtitle: "LIC का भरोसा, निवेशन का साथ",
+      subtitle: "LIC का भरोसा, Pragati का साथ",
     },
 
     who: {
-      heading: "Niveshan कौन है?",
+      // heading: "Pragati कौन है?",
+      heading: "Pragati कौन है?",
+      // para1:
+      //   "Pragati एक अनुभवी और भरोसेमंद LIC एजेंसी है, जो परिवारों को उनके भविष्य की सुरक्षा के लिए सही जीवन बीमा और निवेश योजनाएँ चुनने में मार्गदर्शन प्रदान करती है।",
       para1:
-        "Niveshan एक अनुभवी और भरोसेमंद LIC एजेंसी है, जो परिवारों को उनके भविष्य की सुरक्षा के लिए सही जीवन बीमा और निवेश योजनाएँ चुनने में मार्गदर्शन प्रदान करती है।",
+        "Pragati एक अनुभवी और भरोसेमंद LIC एजेंसी है, जो परिवारों को उनके भविष्य की सुरक्षा के लिए सही जीवन बीमा और निवेश योजनाएँ चुनने में मार्गदर्शन प्रदान करती है।",
       para2:
         "हम मानते हैं कि बीमा केवल एक पॉलिसी नहीं, बल्कि आपके सपनों, ज़िम्मेदारियों और परिवार की सुरक्षा का वादा होता है।",
     },
@@ -45,7 +49,8 @@ const aboutText = {
     },
 
     why: {
-      heading: "Niveshan को क्यों चुनें?",
+      heading: "Pragati को क्यों चुनें?",
+      // heading: "Pragati को क्यों चुनें?",
       points: [
         "आपकी ज़रूरत के अनुसार व्यक्तिगत और ईमानदार सलाह",
         "LIC की सभी योजनाओं की स्पष्ट और संपूर्ण जानकारी",
@@ -55,19 +60,21 @@ const aboutText = {
     },
 
     closing:
-      "Niveshan में हम मानते हैं कि आपका भरोसा ही हमारी सबसे बड़ी पहचान है।",
+      // "Pragati में हम मानते हैं कि आपका भरोसा ही हमारी सबसे बड़ी पहचान है।",
+      "Pragati में हम मानते हैं कि आपका भरोसा ही हमारी सबसे बड़ी पहचान है।",
   },
 
   en: {
     header: {
       title: "About Us",
-      subtitle: "Trust of LIC, Support of Niveshan",
+      // subtitle: "Trust of LIC, Support of Pragati",
+      subtitle: "Trust of LIC, Support of Pragati",
     },
 
     who: {
-      heading: "Who is Niveshan?",
+      heading: "Who is Pragati?",
       para1:
-        "Niveshan is an experienced and trusted LIC agency that guides families in choosing the right life insurance and investment plans to secure their future.",
+        "Pragati is an experienced and trusted LIC agency that guides families in choosing the right life insurance and investment plans to secure their future.",
       para2:
         "We believe insurance is not just a policy, but a promise to protect your dreams, responsibilities, and your family’s future.",
     },
@@ -97,7 +104,7 @@ const aboutText = {
     },
 
     why: {
-      heading: "Why Choose Niveshan?",
+      heading: "Why Choose Pragati?",
       points: [
         "Personalized and honest advice based on your needs",
         "Clear and complete information about all LIC plans",
@@ -107,7 +114,7 @@ const aboutText = {
     },
 
     closing:
-      "At Niveshan, we believe your trust is our greatest identity.",
+      "At Pragati, we believe your trust is our greatest identity.",
   },
 };
 
@@ -145,7 +152,7 @@ const About = () => {
             <div className="col-md-6 text-center">
               <img
                 src={aboutOffice}
-                alt="Niveshan LIC Office"
+                alt="Pragati LIC Office"
                 className="img-fluid rounded shadow"
               />
             </div>

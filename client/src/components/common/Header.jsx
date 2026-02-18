@@ -30,7 +30,7 @@ const Header = () => {
 
                         <div className="d-flex gap-4 text-secondary">
                             <span><i className="bi bi-telephone me-1"></i> +91 99999 99999</span>
-                            <span><i className="bi bi-envelope me-1"></i> info@niveshanlic.com</span>
+                            <span><i className="bi bi-envelope me-1"></i> info@Pragatilic.com</span>
                             <span><i className="bi bi-geo-alt me-1"></i> Raipur, CG</span>
                         </div>
 
@@ -59,9 +59,9 @@ const Header = () => {
 
                         {/* Logo */}
                         <Link to="/" className="d-flex align-items-center text-decoration-none">
-                            <img src="/logo.jpeg" alt="Niveshan LIC" height="48" className="me-2" />
+                            <img src="/lic-logo.png" alt="Pragati LIC" height="48" className="me-2" />
                             <div>
-                                <div className="fw-bold text-dark">Niveshan LIC Agency</div>
+                                <div className="fw-bold text-dark">Pragati LIC Agency</div>
                                 <div className="text-muted small">
                                     {t.tagline}
                                 </div>

@@ -6,10 +6,10 @@ import { useLanguage } from "../../context/LanguageContext";
 /* ================= LOCAL TRANSLATION OBJECT ================= */
 const whyText = {
     hi: {
-        heading: "Niveshan क्यों?",
+        heading: "Pragati क्यों?",
         description: `जब बात आपके और आपके परिवार के भविष्य की हो,
     तो सही सलाह और भरोसेमंद मार्गदर्शन सबसे ज़रूरी होता है।
-    Niveshan, LIC के साथ मिलकर आपको देता है
+    Pragati, LIC के साथ मिलकर आपको देता है
     सुरक्षित, पारदर्शी और दीर्घकालिक समाधान।`,
         cards: [
             {
@@ -33,10 +33,10 @@ const whyText = {
     },
 
     en: {
-        heading: "Why Niveshan?",
+        heading: "Why Pragati?",
         description: `When it comes to your family’s future,
     the right advice and trusted guidance matter the most.
-    With LIC, Niveshan provides secure, transparent,
+    With LIC, Pragati provides secure, transparent,
     and long-term financial solutions.`,
         cards: [
             {

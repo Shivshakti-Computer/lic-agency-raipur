@@ -4,7 +4,8 @@ import { useLanguage } from "../../context/LanguageContext";
 /* ================= LOCAL TRANSLATION OBJECT ================= */
 const footerText = {
     hi: {
-        brandTagline: "LIC का भरोसा, निवेशन का साथ",
+        // brandTagline: "LIC का भरोसा, निवेशन का साथ",
+        brandTagline: "LIC का भरोसा, Pragati का साथ",
         brandDesc:
             "एक अनुभवी LIC एजेंसी, जो आपके और आपके परिवार के भविष्य को सुरक्षित बनाने में आपकी सहायता करती है।",
 
@@ -27,7 +28,7 @@ const footerText = {
     },
 
     en: {
-        brandTagline: "Trust of LIC, Support of Niveshan",
+        brandTagline: "Trust of LIC, Support of Pragati",
         brandDesc:
             "An experienced LIC agency helping you and your family secure a safe and financially stable future.",
 
@@ -64,13 +65,13 @@ const Footer = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="d-flex align-items-center mb-3">
                             <img
-                                src="/logo.jpeg"
-                                alt="Niveshan LIC Agency"
+                                src="/lic-logo.png"
+                                alt="Pragati LIC Agency"
                                 height="44"
                                 className="me-2"
                             />
                             <div>
-                                <h5 className="fw-bold mb-0">Niveshan LIC Agency</h5>
+                                <h5 className="fw-bold mb-0">Pragati LIC Agency</h5>
                                 <small className="text-muted">
                                     {t.brandTagline}
                                 </small>
@@ -110,7 +111,7 @@ const Footer = () => {
 
                         <p className="small mb-2">
                             <i className="bi bi-envelope me-2"></i>
-                            info@niveshan.in
+                            info@Pragati.in
                         </p>
 
                         <div className="d-flex gap-3 mt-3">
@@ -141,7 +142,7 @@ const Footer = () => {
                 {/* ================= BOTTOM BAR ================= */}
                 <div className="d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
                     <div>
-                        © {new Date().getFullYear()} Niveshan LIC Agency. All Rights Reserved.
+                        © {new Date().getFullYear()} Pragati LIC Agency. All Rights Reserved.
                     </div>
                     <div className="mt-2 mt-md-0">
                         {t.bottomNote}

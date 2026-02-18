@@ -8,7 +8,7 @@ const translations = {
             documents: "Send Documents",
             contact: "Contact",
         },
-        tagline: "Bharosa LIC ka, Saath Niveshan ka",
+        tagline: "Bharosa LIC ka, Saath Pragati ka",
         getQuote: "Get Quote",
         menu: "Menu"
     },
@@ -22,7 +22,8 @@ const translations = {
             documents: "दस्तावेज़ भेजें",
             contact: "संपर्क करें",
         },
-        tagline: "LIC का भरोसा, निवेशन का साथ",
+        // tagline: "LIC का भरोसा, निवेशन का साथ",
+        tagline: "LIC का भरोसा, Pragati का साथ",
         getQuote: "कोटेशन प्राप्त करें",
         menu: "मेनू"
     },

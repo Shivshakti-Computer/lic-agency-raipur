@@ -8,14 +8,14 @@ const heroText = {
     hi: {
         title: "भविष्य की सुरक्षा,",
         highlight: "आज का भरोसा",
-        tagline: "Bharosa LIC ka, Saath Niveshan ka",
+        tagline: "Bharosa LIC ka, Saath Pragati ka",
         subtitle: "आपके और आपके परिवार के सुरक्षित भविष्य के लिए",
         cta: "निःशुल्क परामर्श लें",
     },
     en: {
         title: "Secure Tomorrow,",
         highlight: "Trust Today",
-        tagline: "Trust of LIC, Support of Niveshan",
+        tagline: "Trust of LIC, Support of Pragati",
         subtitle: "For a safe and secure future of you and your family",
         cta: "Get Free Consultation",
     },

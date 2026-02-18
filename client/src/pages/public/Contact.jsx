@@ -33,7 +33,7 @@ const contactText = {
         "LIC सलाहकार बनना",
       ],
       consent:
-        "मैं सहमति देता/देती हूँ कि मेरे द्वारा प्रदान की गई जानकारी के आधार पर Niveshan की टीम मुझसे संपर्क कर सकती है।",
+        "मैं सहमति देता/देती हूँ कि मेरे द्वारा प्रदान की गई जानकारी के आधार पर Pragati की टीम मुझसे संपर्क कर सकती है।",
       submit: "विवरण सबमिट करें",
     },
 
@@ -71,7 +71,7 @@ const contactText = {
         "Become an LIC Advisor",
       ],
       consent:
-        "I agree that the Niveshan team may contact me based on the information provided by me.",
+        "I agree that the Pragati team may contact me based on the information provided by me.",
       submit: "Submit Details",
     },
 
@@ -119,7 +119,7 @@ const Contact = () => {
               <div className="p-4 bg-light rounded shadow-sm h-100">
                 <h5 className="fw-bold">✉️ {t.info.email}</h5>
                 <p className="text-muted mb-0">
-                  info@niveshan.in
+                  info@Pragati.in
                 </p>
               </div>
             </div>

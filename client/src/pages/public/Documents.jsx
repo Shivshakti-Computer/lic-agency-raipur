@@ -37,7 +37,7 @@ const documentsText = {
         },
 
         trustNote:
-            "आपके दस्तावेज़ पूर्णतः सुरक्षित रखे जाएंगे और केवल Niveshan एवं LIC प्रक्रिया हेतु उपयोग में लाए जाएंगे।",
+            "आपके दस्तावेज़ पूर्णतः सुरक्षित रखे जाएंगे और केवल Pragati एवं LIC प्रक्रिया हेतु उपयोग में लाए जाएंगे।",
     },
 
     en: {
@@ -74,7 +74,7 @@ const documentsText = {
         },
 
         trustNote:
-            "Your documents will be kept completely secure and will be used only for Niveshan and LIC processing purposes.",
+            "Your documents will be kept completely secure and will be used only for Pragati and LIC processing purposes.",
     },
 };
 
